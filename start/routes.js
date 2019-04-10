@@ -26,4 +26,7 @@ Route
 // Route.post('/posts', ({ request }) => request.all())
 // Route.post('/posts', ({ request }) => request.only(['title','content']))
 // Route.post('/posts', ({ request }) => request.except(['title','content']))
-Route.post('/posts', ({ request }) => request.input('status','draft'))
+// Route.post('/posts', ({ request }) => request.input('status','draft'))
+
+// Route.post('/posts', ({ request }) => request.only(['title','content']))
+Route.post('/posts', ({ request }) => request.collect(['title','content']))
