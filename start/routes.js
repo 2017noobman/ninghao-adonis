@@ -38,3 +38,9 @@ Route
 //     response.type('text/plain')
 //     return '<h1>List of posts.</h1>'
 // })
+
+Route.get('/posts', ({ request, response }) => {
+    response.cookie('theme', 'dark')
+    response.clearCookie('theme')
+    return request.cookie('theme', 'light')
+})
